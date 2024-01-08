@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://ufgn1tggp8mx"]
+
+[ext_resource type="Script" path="res://scripts/terrain_object.gd" id="1_dvtws"]
+[ext_resource type="Material" uid="uid://bdue7ugvl1w0m" path="res://resources/tree.tres" id="2_0x6ek"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8khu"]
+albedo_color = Color(0.454902, 0.25098, 0.133333, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_p2g5r"]
+material = SubResource("StandardMaterial3D_q8khu")
+top_radius = 0.1
+bottom_radius = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_rqdjm"]
+material = ExtResource("2_0x6ek")
+radius = 0.4
+radial_segments = 4
+rings = 2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tv5km"]
+height = 1.67435
+radius = 0.113746
+
+[node name="Tree" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.237714, 0)
+script = ExtResource("1_dvtws")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.233033, 0)
+mesh = SubResource("CylinderMesh_p2g5r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.660766, 0)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13544, 0.823095, -0.131479)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142295, 0.846747, 0.175746)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954084, 0)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.185525, 0.83609, 0.155627)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173362, 0.83609, -0.143705)
+mesh = SubResource("SphereMesh_rqdjm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.606582, 0)
+shape = SubResource("CylinderShape3D_tv5km")

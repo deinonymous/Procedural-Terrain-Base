@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://xx2ucx7ya38o"]
+
+[ext_resource type="PackedScene" uid="uid://dkvyptwpa415q" path="res://scenes/terrain.tscn" id="1_abkxa"]
+[ext_resource type="PackedScene" uid="uid://dctuhlahxi7y6" path="res://scenes/player.tscn" id="2_wvn1f"]
+
+[sub_resource type="Environment" id="Environment_23yag"]
+ambient_light_source = 2
+ambient_light_color = Color(0.239216, 0.172549, 0.164706, 1)
+fog_enabled = true
+fog_light_color = Color(0.584314, 0.941176, 0.941176, 1)
+fog_light_energy = 0.5
+fog_density = 0.003
+fog_sky_affect = 0.5
+volumetric_fog_density = 0.1
+volumetric_fog_albedo = Color(0.831373, 1, 1, 1)
+volumetric_fog_length = 2000.0
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_6dis3"]
+auto_exposure_enabled = true
+auto_exposure_speed = 3.0
+auto_exposure_min_exposure_value = -4.0
+
+[node name="World" type="Node3D"]
+
+[node name="Terrain" parent="." instance=ExtResource("1_abkxa")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_23yag")
+camera_attributes = SubResource("CameraAttributesPhysical_6dis3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.445151, 0.895456, 0, -0.895456, 0.445151, 10.2458, 346.028, -5.10597)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 3000.0
+sky_mode = 1
+
+[node name="player" parent="." instance=ExtResource("2_wvn1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.2458, 228.528, -5.10597)

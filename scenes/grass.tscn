@@ -1,0 +1,554 @@
+[gd_scene load_steps=4 format=3 uid="uid://gcyi4q3wrxj1"]
+
+[ext_resource type="Script" path="res://scripts/terrain_object.gd" id="1_wohqp"]
+[ext_resource type="Material" uid="uid://cbxq5d1kavgek" path="res://resources/grass.tres" id="2_1oc0b"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ebc1b"]
+material = ExtResource("2_1oc0b")
+top_radius = 0.0
+bottom_radius = 0.03
+height = 0.25
+radial_segments = 4
+rings = 1
+
+[node name="Grass" type="StaticBody3D"]
+script = ExtResource("1_wohqp")
+
+[node name="Tuft" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.130849, 0, 0.123593)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft2"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.192311, 0, -0.0946419)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft3"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358866, 0, -0.17349)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft4"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12823, 0, -0.143573)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft5"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159614, 0, 0.0746157)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft6"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0610187, -0.0556026, 0.327694)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft7"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.387911, -0.049571, 0.122214)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft8"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.272312, -0.0753656, -0.424067)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft9"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.154721, -0.0799398, -0.398237)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft10"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft11" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4462, -0.0705606, -0.0252161)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft11"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="Tuft12" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611793, -0.0670923, -0.214392)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(0.907352, -0.351107, 0.231161, 0.420371, 0.75785, -0.498951, 0, 0.549898, 0.835232, -0.0621649, 0.0414376, 0.0745367)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(0.977161, 0.125738, 0.171309, 0, 0.806156, -0.591704, -0.212502, 0.57819, 0.787744, 0, 0.0414376, 0.0721393)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(0.987389, -0.143483, -0.066901, 0.158313, 0.894893, 0.417257, 0, -0.422587, 0.906323, 0, 0.0414376, -0.0494669)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(0.917112, -0.3986, -0.00486354, 0.389221, 0.892765, 0.226888, -0.0860956, -0.209975, 0.973908, -0.0766582, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Tuft12"]
+transform = Transform3D(0.953354, 0.301854, 0, -0.301854, 0.953354, 0, 0, 0, 1, 0.0443413, 0.0414376, 0)
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("CylinderMesh_ebc1b")
+skeleton = NodePath("../..")

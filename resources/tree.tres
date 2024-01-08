@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bdue7ugvl1w0m"]
+
+[ext_resource type="Texture2D" uid="uid://ccgai7khmprmw" path="res://textures/noise_texture.png" id="1_72aqu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qf0up"]
+transparency = 1
+blend_mode = 2
+albedo_color = Color(1, 1, 1, 0.215686)
+albedo_texture = ExtResource("1_72aqu")
+uv1_triplanar = true
+texture_filter = 0
+
+[resource]
+render_priority = -1
+next_pass = SubResource("StandardMaterial3D_qf0up")
+albedo_color = Color(0.2, 0.501961, 0.32549, 1)
+metallic_specular = 0.0
+uv1_scale = Vector3(10, 10, 10)
+uv1_triplanar = true
+uv2_triplanar = true
+texture_filter = 0
