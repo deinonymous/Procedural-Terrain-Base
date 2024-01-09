@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://xx2ucx7ya38o"]
+[gd_scene load_steps=7 format=3 uid="uid://xx2ucx7ya38o"]
 
 [ext_resource type="PackedScene" uid="uid://dkvyptwpa415q" path="res://scenes/terrain.tscn" id="1_abkxa"]
 [ext_resource type="Script" path="res://scripts/environment.gd" id="2_6vo37"]
+[ext_resource type="PackedScene" uid="uid://dctuhlahxi7y6" path="res://scenes/dino-scenes/vraptor.tscn" id="2_wvn1f"]
 [ext_resource type="Script" path="res://scripts/celestial_bodies.gd" id="4_mhern"]
 
 [sub_resource type="Environment" id="Environment_23yag"]
 background_mode = 1
 ambient_light_source = 2
+ambient_light_color = Color(0.239216, 0.172549, 0.164706, 1)
+ambient_light_energy = 0.25
 fog_enabled = true
 fog_light_color = Color(0.494118, 1, 1, 1)
 fog_light_energy = 0.5
@@ -33,6 +36,9 @@ environment = SubResource("Environment_23yag")
 camera_attributes = SubResource("CameraAttributesPractical_8fwr1")
 script = ExtResource("2_6vo37")
 
+[node name="player" parent="." instance=ExtResource("2_wvn1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 15, 0)
+
 [node name="CelestialBodies" type="Node3D" parent="."]
 script = ExtResource("4_mhern")
 
@@ -41,3 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2458, 346.028, -5.10597)
 shadow_enabled = true
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 3000.0
+sky_mode = 1
+
+[node name="Moon" type="DirectionalLight3D" parent="CelestialBodies"]
+transform = Transform3D(0.5, -7.57103e-08, -0.866025, 0, -1, 8.74228e-08, -0.866025, -4.37114e-08, -0.5, 10.2458, 346.028, -5.10597)

@@ -1,7 +1,8 @@
-extends CharacterBody3D
+extends CharacterPersistentState
 
 class_name PlayerPersistentState
 
+@onready var collision: CollisionShape3D = $BodyCollision
 @onready var body: Node3D = $FullBody/Body
 @onready var head_base: Node3D = $FullBody/Body/TorsoMesh/Neck/BaseOfHead
 @onready var head_mesh: MeshInstance3D = $FullBody/Body/TorsoMesh/Neck/BaseOfHead/Head
@@ -16,12 +17,12 @@ var state_factory
 var state_elected: bool
 
 #physics/motion
-var inertia = 0.7
-var run_speed = 12
-var walk_speed = 8
-var sneak_speed = 4
-var midair_correction_speed = 0.2
-var jump_velocity = 16
+var inertia = 0
+var run_speed = 0
+var walk_speed = 0
+var sneak_speed = 0
+var midair_correction_speed = 0
+var jump_velocity = 0
 var input_direction: Vector2 = Vector2(0,0)
 var direction: Vector2 = Vector2(0,0)
 
@@ -30,9 +31,9 @@ var camera_target_position: Vector3
 
 func _ready():
   Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-  state_factory = PlayerStateFactory.new()
-  change_state("idle")
   camera_target_position = camera3d.position
+  camera_occlusion_raycast.add_exception(self)
+  change_state("idle")
 
 func _unhandled_input(event):
   #handle camera rotation

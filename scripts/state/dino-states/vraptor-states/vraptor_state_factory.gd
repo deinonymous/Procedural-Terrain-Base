@@ -1,4 +1,4 @@
-class_name PlayerStateFactory
+class_name VraptorStateFactory
 
 var states
 

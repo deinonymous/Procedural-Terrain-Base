@@ -10,13 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Procedural Terrain Base"
+config/name="Mesozoic"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 
 Physics="*res://scripts/autoload/Physics.gd"
+World="*res://scripts/autoload/World.gd"
 
 [display]
 
@@ -79,4 +80,4 @@ camera_zoom_out={
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.584314, 0.941176, 0.941176, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

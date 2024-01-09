@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8ih2yw2n210b"]
+[gd_scene load_steps=16 format=3 uid="uid://c8ih2yw2n210b"]
 
 [ext_resource type="Script" path="res://scripts/terrain_object.gd" id="1_8ij4t"]
 [ext_resource type="Material" uid="uid://bdue7ugvl1w0m" path="res://resources/tree.tres" id="1_o28j1"]
+[ext_resource type="Material" uid="uid://c1xme82snk1v8" path="res://resources/noise_texture.tres" id="3_w6bfy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8khu"]
 albedo_color = Color(0.454902, 0.25098, 0.133333, 1)
@@ -22,6 +23,58 @@ rings = 2
 [sub_resource type="SphereShape3D" id="SphereShape3D_ad7jg"]
 radius = 0.26699
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p75i0"]
+next_pass = ExtResource("3_w6bfy")
+transparency = 1
+albedo_color = Color(0.905882, 0.439216, 0.917647, 1)
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_tdt27"]
+material = SubResource("StandardMaterial3D_p75i0")
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upwrc"]
+next_pass = ExtResource("3_w6bfy")
+transparency = 1
+albedo_color = Color(0.905882, 0.439216, 0.917647, 1)
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_xmlrw"]
+material = SubResource("StandardMaterial3D_upwrc")
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muy4d"]
+next_pass = ExtResource("3_w6bfy")
+transparency = 1
+albedo_color = Color(0.905882, 0.439216, 0.917647, 1)
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_rud4r"]
+material = SubResource("StandardMaterial3D_muy4d")
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbieq"]
+next_pass = ExtResource("3_w6bfy")
+transparency = 1
+albedo_color = Color(0.905882, 0.439216, 0.917647, 1)
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_uxj28"]
+material = SubResource("StandardMaterial3D_jbieq")
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 1
+
 [node name="Bush" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.237714, 0)
 script = ExtResource("1_8ij4t")
@@ -34,8 +87,61 @@ mesh = SubResource("CylinderMesh_p2g5r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.252255, 0)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
 mesh = SubResource("SphereMesh_rqdjm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.242441, 0)
 shape = SubResource("SphereShape3D_ad7jg")
+
+[node name="Fruits" type="Node3D" parent="."]
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, -0.00608045, 0.195181, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.363082, -0.0747714, -0.310087)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_tdt27")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.336115, 0.134216, 0.369076)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_xmlrw")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.9609, -0.12792, -0.245576, 0, -0.88689, 0.461981, -0.276895, -0.443917, -0.852213, 0.468686, -0.0450435, 0.241921)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_tdt27")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.9609, -0.12792, -0.245576, 0, -0.88689, 0.461981, -0.276895, -0.443917, -0.852213, 0.261322, 0.169918, -0.375841)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_xmlrw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.72511, -0.688633, 0, 0.688633, 0.72511, 0, 0, 0, 1, -0.230565, -0.0643461, -0.39533)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_rud4r")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.978846, 0.204599, 0, -0.204599, 0.978846, 0, 0, 0, 1, -0.468315, 0.124147, -0.195334)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_uxj28")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.978846, 0.204599, 0, -0.204599, 0.978846, 0, 0, 0, 1, -0.432258, 0.124147, 0.267224)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_uxj28")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Fruits"]
+transform = Transform3D(0.978846, 0.204599, 0, -0.204599, 0.978846, 0, 0, 0, 1, -0.227121, -0.0286998, 0.403596)
+visibility_range_end = 300.0
+visibility_range_end_margin = 5.0
+mesh = SubResource("SphereMesh_uxj28")
