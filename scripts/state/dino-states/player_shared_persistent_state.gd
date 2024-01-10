@@ -42,10 +42,10 @@ func _unhandled_input(event):
     camera.rotation.y -= event.relative.x/80
     camera.rotation.x = clampf(camera.rotation.x - event.relative.y/80, deg_to_rad(-60), deg_to_rad(60))
     head_base.rotation.x = camera.rotation.x / 2
-  if camera.rotation.y - body.rotation.y > 2 * PI:
-    camera.rotation.y -= 2 * PI
-  elif camera.rotation.y - body.rotation.y < -2 * PI:
-    camera.rotation.y += 2 * PI
+  if camera.rotation.y - body.rotation.y > PI:
+    camera.rotation.y -= 2*PI
+  elif camera.rotation.y - body.rotation.y < -PI:
+    camera.rotation.y += 2*PI
 
 func _process(_delta):
 
