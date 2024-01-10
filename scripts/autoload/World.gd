@@ -2,7 +2,7 @@ extends Node
 
 var origin
 var sun_rotation
-var day_length = 30.0
+var day_length = 60.0*10.0
 var time = day_length / 2
 var dayness = 0.0
 var nightness = 0.0
